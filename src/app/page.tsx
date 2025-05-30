@@ -158,7 +158,7 @@ export default function SudokuGame() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-purple-100 p-2 sm:p-4">
+    <div className="min-h-screen bg-pink-50 p-2 sm:p-4" style={{background: 'linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f3e8ff 100%)'}}>
       <div className="max-w-sm mx-auto sm:max-w-lg">
         <div className="text-center mb-4">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-1">
@@ -171,7 +171,7 @@ export default function SudokuGame() {
         
         {/* Zorluk seviyesi göstergesi */}
         <div className="text-center mb-4">
-          <span className="inline-block bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
+          <span className="inline-block bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full border border-purple-200">
             Zorluk: {difficulty} 💪
           </span>
         </div>
@@ -182,7 +182,7 @@ export default function SudokuGame() {
             <div className="absolute inset-0 bg-white bg-opacity-90 flex items-center justify-center rounded-lg z-10">
               <div className="text-purple-600 font-semibold text-center">
                 <div className="text-2xl mb-2">💖</div>
-                <div>Yeni bulmaca yükleniyor...</div>
+                <div>Yeni bulmaca hazırlıyorum...</div>
               </div>
             </div>
           )}
@@ -238,7 +238,11 @@ export default function SudokuGame() {
                 key={number}
                 onClick={() => handleNumberInput(number)}
                 disabled={isLoading}
-                className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 active:from-pink-700 active:to-purple-700 text-white font-bold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-pink-500 active:scale-95 text-lg shadow-md ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                className={`w-12 h-12 sm:w-14 sm:h-14 text-white font-bold rounded-lg transition-all duration-200 focus:outline-none active:scale-95 text-lg shadow-md border-2 border-pink-300 ${isLoading ? 'opacity-50 cursor-not-allowed bg-gray-400' : 'bg-pink-500 hover:bg-pink-600 active:bg-pink-700'}`}
+                style={{
+                  background: isLoading ? '#9ca3af' : 'linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)',
+                  color: '#ffffff'
+                }}
               >
                 {number}
               </button>
@@ -246,7 +250,11 @@ export default function SudokuGame() {
             <button
               onClick={clearCell}
               disabled={isLoading}
-              className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-rose-500 to-red-500 hover:from-rose-600 hover:to-red-600 active:from-rose-700 active:to-red-700 text-white font-bold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-rose-500 active:scale-95 text-lg shadow-md ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`w-12 h-12 sm:w-14 sm:h-14 text-white font-bold rounded-lg transition-all duration-200 focus:outline-none active:scale-95 text-lg shadow-md border-2 border-red-300 ${isLoading ? 'opacity-50 cursor-not-allowed bg-gray-400' : 'bg-red-500 hover:bg-red-600 active:bg-red-700'}`}
+              style={{
+                background: isLoading ? '#9ca3af' : 'linear-gradient(135deg, #f43f5e 0%, #dc2626 100%)',
+                color: '#ffffff'
+              }}
             >
               ×
             </button>
@@ -258,18 +266,27 @@ export default function SudokuGame() {
           <button
             onClick={fetchNewPuzzle}
             disabled={isLoading}
-            className={`px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 active:from-green-700 active:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 active:scale-95 shadow-md ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`px-4 py-2 sm:px-6 sm:py-3 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none active:scale-95 shadow-md border-2 border-green-300 ${isLoading ? 'opacity-50 cursor-not-allowed bg-gray-400' : 'bg-green-500 hover:bg-green-600 active:bg-green-700'}`}
+            style={{
+              background: isLoading ? '#9ca3af' : 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+              color: '#ffffff'
+            }}
           >
             {isLoading ? '💖 Hazırlıyorum...' : '🎲 Yeni Bulmaca'}
           </button>
           <button
             onClick={resetGame}
             disabled={isLoading}
-            className={`px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-gray-500 to-slate-500 hover:from-gray-600 hover:to-slate-600 active:from-gray-700 active:to-slate-700 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 active:scale-95 shadow-md ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`px-4 py-2 sm:px-6 sm:py-3 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none active:scale-95 shadow-md border-2 border-gray-300 ${isLoading ? 'opacity-50 cursor-not-allowed bg-gray-400' : 'bg-gray-500 hover:bg-gray-600 active:bg-gray-700'}`}
+            style={{
+              background: isLoading ? '#9ca3af' : 'linear-gradient(135deg, #6b7280 0%, #4b5563 100%)',
+              color: '#ffffff'
+            }}
           >
             🔄 Baştan Başla
           </button>
         </div>
+
       </div>
     </div>
   )
