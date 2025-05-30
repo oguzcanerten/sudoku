@@ -165,7 +165,7 @@ export default function SudokuGame() {
             💕 Buse & Oğuz Can 💕
           </h1>
           <h2 className="text-lg sm:text-xl font-semibold text-purple-600">
-            Sudoku Oyunu
+            Aşkımın Sudoku Oyunu
           </h2>
         </div>
         
