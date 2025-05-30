@@ -38,6 +38,20 @@ export default function SudokuGame() {
   const [difficulty, setDifficulty] = useState<string>('Medium')
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
+  // Zorluk seviyesini Türkçeleştir
+  const getDifficultyInTurkish = (englishDifficulty: string): string => {
+    switch (englishDifficulty.toLowerCase()) {
+      case 'easy':
+        return 'Kolay 😊'
+      case 'medium':
+        return 'Orta 😐'
+      case 'hard':
+        return 'Zor 😤'
+      default:
+        return 'Orta 😐'
+    }
+  }
+
   // API'den yeni bulmaca getir
   const fetchNewPuzzle = async () => {
     setIsLoading(true)
@@ -172,7 +186,7 @@ export default function SudokuGame() {
         {/* Zorluk seviyesi göstergesi */}
         <div className="text-center mb-4">
           <span className="inline-block bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full border border-purple-200">
-            Zorluk: {difficulty} 💪
+            Zorluk: {getDifficultyInTurkish(difficulty)}
           </span>
         </div>
         
