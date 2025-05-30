@@ -162,7 +162,7 @@ export default function SudokuGame() {
       <div className="max-w-sm mx-auto sm:max-w-lg">
         <div className="text-center mb-4">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-1">
-            💕 Buse & Oğuzcan 💕
+            💕 Buse & Oğuz Can 💕
           </h1>
           <h2 className="text-lg sm:text-xl font-semibold text-purple-600">
             Sudoku Oyunu

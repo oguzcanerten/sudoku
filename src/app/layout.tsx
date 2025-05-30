@@ -13,14 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Buse & Oğuzcan Sudoku",
-  description: "Buse ve Oğuzcan'a özel Sudoku oyunu",
+  title: "Buse & Oğuz Can Sudoku",
+  description: "Buse ve Oğuz Can'a özel Sudoku oyunu",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
   themeColor: "#ffffff",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Buse & Oğuzcan Sudoku"
+    title: "Buse & Oğuz Can Sudoku"
   }
 };
 
